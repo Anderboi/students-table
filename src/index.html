@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Students table</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <script defer src="./main.js"></script>
+  </head>
+  <body class="bg-dark text-light">
+    <div class="container">
+      <header>
+        <h1>Список студентов</h1>
+      </header>
+      <form id="form" class="mb-5">
+        <div class="mb-3">
+          <label for="name" class="form-label">Имя</label>
+          <input type="text" name="name" id="name" class="form-control" />
+        </div>
+        <div class="mb-3">
+          <label for="surname" class="form-label">Фамилия</label>
+
+          <input type="text" name="surname" id="surname" class="form-control" />
+        </div>
+        <div class="mb-3">
+          <label for="lastname" class="form-label">Отчество</label>
+
+          <input
+            type="text"
+            name="lastname"
+            id="lastname"
+            class="form-control"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="birthDate" class="form-label">Дата рождения</label>
+
+          <input
+            type="date"
+            name="birthDate"
+            id="birthDate"
+            class="form-control mb-3"
+          />
+          <label for="startStudy" class="form-label">Год поступления</label>
+          <input
+            type="date"
+            name="startStudy"
+            id="startStudy"
+            class="form-control"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="faculty" class="form-label">Факультет</label>
+
+          <input type="text" name="faculty" id="faculty" class="form-control" />
+        </div>
+
+        <input type="submit" value="submit" class="btn btn-primary" />
+      </form>
+      <div class="input-group mb-5">
+        <input
+          class="form-control"
+          type="text"
+          name="nameSearch"
+          id="nameSearch"
+          placeholder="Поиск по фамилии"
+        />
+        <input
+          class="form-control"
+          type="text"
+          name="facultySearch"
+          id="facultySearch"
+          placeholder="Поиск по факультету"
+        />
+        <input
+          class="form-control"
+          type="text"
+          name="studyStartYearSearch"
+          id="studyStartYearSearch"
+          placeholder="Поиск по началу обучения"
+        />
+        <input
+          class="form-control"
+          type="text"
+          name="studyFinishYearSearch"
+          id="studyFinishYearSearch"
+          placeholder="Поиск по окончанию обучения"
+        />
+      </div>
+      <table class="table text-light">
+        <thead>
+          <tr>
+            <th scope="col" id="thName">ФИО</th>
+            <th scope="col" id="thFaculty">Факультет</th>
+            <th scope="col" id="thBirth">Дата рождения, возраст</th>
+            <th scope="col" id="thStudy">Годы обучения</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </body>
+</html>
